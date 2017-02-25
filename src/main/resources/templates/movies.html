@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Przykład Tymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a href="/add">Dodaj nowy film</a><br/><br/>
+
+<table>
+    <tr>
+        <th>Tytuł</th>
+        <th>Data premiery</th>
+        <th>Aktorzy</th>
+        <th>Kategoria</th>
+    </tr>
+
+    <tr th:each="movie: ${movies}">
+        <td th:text="${movie.title}">Titanic</td>
+        <td th:text="${movie.premiereDate}">1993-12-02</td>
+        <td th:text="${movie.actors}">Leonardo Dicaprio, Kate W.</td>
+        <td th:text="${movie.category}">Sci-fi</td>
+    </tr>
+</table>
+</body>
+</html>
