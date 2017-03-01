@@ -7,20 +7,12 @@
 <body>
 <a href="/add">Dodaj nowy film</a><br/><br/>
 
-<table>
-    <tr>
-        <th>Tytuł</th>
-        <th>Data premiery</th>
-        <th>Aktorzy</th>
-        <th>Kategoria</th>
-    </tr>
-
-    <tr th:each="movie: ${movies}">
-        <td th:text="${movie.title}">Titanic</td>
-        <td th:text="${movie.premiereDate}">1993-12-02</td>
-        <td th:text="${movie.actors}">Leonardo Dicaprio, Kate W.</td>
-        <td th:text="${movie.category}">Sci-fi</td>
-    </tr>
-</table>
+<ul>
+    <!--/*@thymesVar id="movies" type="java.util.List"*/-->
+    <li th:each="movie: ${movies}">
+        <!--/*@thymesVar id="movie" type="pl.javastart.minifilmweb.Movie"*/-->
+        <a href="#" th:href="'/film?id=' + ${movie.id}" th:text="${movie.title}">Titanic</a>
+    </li>
+</ul>
 </body>
 </html>

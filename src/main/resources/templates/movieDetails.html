@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Przykład Tymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h2 th:text="'Szczegóły filmu: '  + ${movie.title}"></h2>
+
+<p th:text="'Data premiery: ' + ${#dates.format(movie.premiereDate, 'dd.MM.yyyy')}"></p>
+
+<h2>Komentarze</h2>
+
+<form method="post" action="/comments/add" th:object="${comment}">
+    Nick: <input type="text" th:field="*{nick}"/><br/>
+    Ocena: <input type="text" th:field="*{rating}"/><br/>
+    Komentarz: <input type="text" th:field="*{text}"/><br/>
+    <input type="hidden" th:value="${movie.id}" name="movie_id"/>
+    <input type="submit"/>
+</form>
+
+<table>
+    <tr>
+        <th>Nick</th>
+        <th>Ocena</th>
+        <th>Komentarz</th>
+    </tr>
+    <tr th:each="comment: ${movie.comments}">
+        <td th:text="${comment.nick}"></td>
+        <td th:text="${comment.rating} + '/10'"></td>
+        <td th:text="${comment.text}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
