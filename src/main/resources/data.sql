@@ -8,4 +8,4 @@ INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (3, 'Marcin', '10'
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (4, 'Agnieszka', '3', 'Słaby', 2);
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (5, 'Dawid', '7', 'Buu!', 2);
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (6, 'Justyna', '3', 'Dno', 1);
-INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (3, 'Gosia', '2', 'Kiepski', 1);
+INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (7, 'Gosia', '2', 'Kiepski', 1);
