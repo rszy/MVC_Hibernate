@@ -4,3 +4,4 @@ INSERT INTO movie (id, actors, category, premiere_date, title) VALUES (2, 'Deep'
 
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (1, 'Marcin', '7', 'Super!', 1);
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (2, 'Basia', '3', 'Kiepski', 1);
+INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (3, 'Arian', '1', 'Tak słaby, że nie dziwię się, że Dicaprio nie dostał w nim Oscara', 1);
