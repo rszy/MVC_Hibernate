@@ -4,4 +4,4 @@ INSERT INTO movie (id, actors, category, premiere_date, title) VALUES (3, 'Linda
 
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (1, 'Marcin', '7', 'Super!', 1);
 INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (2, 'Basia', '3', 'Kiepski', 1);
-INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (3, 'Gosia', '9', 'Kiepski', 1);
+INSERT INTO comment (id, nick, rating, text, movie_id) VALUES (3, 'Gosia', '1', 'Kiepski', 1);
