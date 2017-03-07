@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class CommnetController {
+public class CommentController {
 
     @Autowired
     private MovieRepository movieRepository;
