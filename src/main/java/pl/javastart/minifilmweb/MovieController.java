@@ -40,6 +40,12 @@ public class MovieController {
         Movie movie = movieRepository.findOne(id);
         model.addAttribute("movie", movie);
         model.addAttribute("comment", new Comment());
+        double sum = 0;
+        for (Comment comment : movie.getComments()) {
+            sum = sum+comment.getRating();
+        }
+        double rating = sum/movie.getComments().size();
+        model.addAttribute("rating", rating);
         return "movieDetails";
     }
 

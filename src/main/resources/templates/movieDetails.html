@@ -10,6 +10,8 @@
 
 <p th:text="'Data premiery: ' + ${#dates.format(movie.premiereDate, 'dd.MM.yyyy')}"></p>
 
+<p th:text="'Rating: '+${rating}"></p>
+
 <h2>Komentarze</h2>
 
 <form method="post" action="/comments/add" th:object="${comment}">
